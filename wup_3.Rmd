@@ -40,7 +40,21 @@ favstats(alcohol~Seat,data=davisdata)
 According to this numerical data, there is a difference in the amount of alcohol consumed in ounces between the front, middle, and back rows. The back row had a mean of 9.6 ounces consumed while the middle row had a mean of 3.3 ounces consumed and the front row had the lowest mean of 1.8 ounces consumed. There appears to be a wider margin between the rows concerning the amount of alcohol the students consume in ounces. 
 
 ## Inferential Tests
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+The p value is 0.000116, this is less than 0.05 so, we reject the null hypothesis and conclude that their is a relationship between the row that students choose to sit in and the amount of alcohol they consume. 
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+This plot displays that there is a difference in the amount of alcohol a student consumes based off of the row they choose to sit in as in the front, middle, or back row. 
 
 ## Conclusions
+Is there a relationship between the row someone sits in and the amount of alcohol they consume? 
 
+Based on the box plot, model1, and turkey plot, we found that there is a significant difference in the amount of alcohol consumed by students that sit in the front, middle, and back row. The p value as 0.000116 which is smaller than 0.5 and signified that we reject the null hypothesis. Therefore, according to the data, there is a relationship between the alcohol consumed and the row a student elects to sit in. 
 
