@@ -20,9 +20,19 @@ Is there a relationship between the row someone chooses to sit in and the amount
 $H_0$: There is no relationship between the row someone chooses to sit in and the amount of alcohol consumed.  
 $H_A$: There is a relationship between the row someone chooses to sit in and the amount of alcohol consumed.  
 
-## Now plot the data 
+## Methods
+Seat is categorical. 
+Alcohol consumption is numerical. 
+
+## Data Summary
+
 
 ## Now add in boxplot
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
+
+This box plot graph shows that there is a significant difference in the alcohol consumption between the seat rows back, front, and middle. The students in the back row consumed significantly more alcohol than the middle and front rows. The middle row consumed a bit more than the front row. The front row consumed the least amount of alcohol. 
 
 ### get fancy  
 
