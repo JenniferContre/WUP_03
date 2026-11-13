@@ -22,11 +22,10 @@ $H_A$: There is a relationship between the row someone chooses to sit in and the
 
 ## Methods
 Seat is categorical. 
+
 Alcohol consumption is numerical. 
 
 ## Data Summary
-
-
 ## Now add in boxplot
 ```{r}
 boxplot(alcohol~Seat,data=davisdata)
@@ -34,9 +33,11 @@ boxplot(alcohol~Seat,data=davisdata)
 
 This box plot graph shows that there is a significant difference in the alcohol consumption between the seat rows back, front, and middle. The students in the back row consumed significantly more alcohol than the middle and front rows. The middle row consumed a bit more than the front row. The front row consumed the least amount of alcohol. 
 
-### get fancy  
-
-## Numerical Summarys 
+## Numerical Summaries 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+According to this numerical data, there is a difference in the amount of alcohol consumed in ounces between the front, middle, and back rows. The back row had a mean of 9.6 ounces consumed while the middle row had a mean of 3.3 ounces consumed and the front row had the lowest mean of 1.8 ounces consumed. There appears to be a wider margin between the rows concerning the amount of alcohol the students consume in ounces. 
 
 ## Inferential Tests
 
